@@ -13,16 +13,74 @@
         <h3>Assignment 6 &laquo; Data Visualization Dashboard &raquo;</h3>
     </div>
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
-    <div class="row">
+    <div class="row" style="text-align: center;">
         <div class="col-lg-6">
+            <button type="button" class="btn btn-info" onclick="setData('NA_Sales')">NA Sales</button>
+            <button type="button" class="btn btn-info" onclick="setData('Global_Sales')">Global Sales</button>
             <div id="graph1"></div>
             <div id="graph2"></div><br/>
         </div>
         <div class="col-lg-6">
+            <button type="button" class="btn btn-info" onclick="setData3('NA_Sales')">NA Sales</button>
+            <button type="button" class="btn btn-info" onclick="setData3('EU_Sales')">EU Sales</button>
+            <button type="button" class="btn btn-info" onclick="setData3('JP_Sales')">JP Sales</button>
+            <button type="button" class="btn btn-info" onclick="setData3('Other_Sales')">Other Sales</button>
+            <button type="button" class="btn btn-info" onclick="setData3('Global_Sales')">Global Sales</button>
             <div id="graph3"></div>
         </div>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
 </body>
+</html>
+
+<html lang="en">
+    <div style="text-align: center;">
+        <h2>Written Questions:</h2>
+        <h4>
+            1. The first barplot answers the question on what the top 10 video games were all time. I decided to first rank them 
+            by North American Sales as that is our current location, then added an option to view the rank of the video games 
+            globally (global sales) for comparison. The top video games are at the top of graph with a longer bar to represent higher 
+            sales. </br>
+            The pieplot answers the question overall (by global sales) on which genre is most popular. Also, it addresses 
+            the question of what are the top publishers for each genre. The pieplot in sorted order clock-wise represents the 
+            proportion/percentage of sales from the total in that genre. Furthermore, hovering over the slices will pop up a card 
+            telling what the top 3 publishers are for that genre. </br>
+            The second barplot represents the genre sales broken down by region (NA, EU, JP, Other, Global). The barplot will rank 
+            the genres by sales with the highest and widest bar at the top. I included buttons to change the barplot based on which 
+            region to visualize for top genre. </br>
+        </br>
+        </br>
+            2. D3 was very helpful in adding proper scaling for transitions of the barplots (different sale values will 
+            correspond to lower/higher max values). D3 was helpful for giving a lot of flexibility, there were a lot options to 
+            choose from the to address the questions, from barplots, scatterplots, maps, pieplots, histograms, etc.. D3 was helpful 
+            in having plentiful customizations. It was relatively simple to change the positions, colors, or add new functions like 
+            the tooltips with mouseover and mouseout functions. </br>
+        </br>
+        </br>
+            3. D3 may have a lot a parts and customization tools, so if the visualization should be very simple and clean it may be 
+            better to use other tools that are faster to implement. D3 although very diverse has a limited number of built in 
+            functions, you may need to have your own unique/creative visualization to be represent your data. If your visualization 
+            has a lot of movement it may be better to use other tools (I may be incorrect about this though). </br>
+        </br>
+        </br>
+            4. I addressed the possiblity of colorblindness by not having color needed to correctly grasp the visualization. 
+            For example, from “A Comprehensive Guide to Accessible Data Visualization,” I made sure to add seperations in the 
+            slices of the piechart to ensure differences if the user cannot differentiate color.
+            Users that might find it difficult to access the visualization would be visually impaired or unable to click on the 
+            actions to see more/change the visualization. For example, I have buttons for the user needs to click to see other 
+            parts of the visualization and hovering over the slices of the piechart to address the question of what are the top 
+            publishers for each genre. Steps to help overcome this, would be add other sensors other than vision (sound, touch, etc.) 
+            and to fully represent all the data without any action required to see them. </br>
+        </br>
+        </br>
+            5. Stages of the development of the visualization I felt like I could of changed to help improve the accessiblity to all 
+            users would be changing the idea of condensing multiple parts of visualizations into 1 graph. For example, I could of 
+            created a seperate graph to represent the top publishers for each genre, but I decided to add that to tooltip hoverings on 
+            top of the piechart for 'efficiency'. Also, it may have been better to in some way represent all the genres broken down to 
+            all the regions in 1 collected graph (with no action/buttons required). Overall I was more concerned with efficiency/
+            compactness and visually appealing transitions/changes to the visualization which kept me from going through with those 
+            ideas.
+        </h4>
+    </div>
 </html>
